@@ -4,3 +4,12 @@
     box-sizing: border-box;
     background-color: aliceblue;
 }
+
+:root {
+    --background-color: #E2E8F0;
+    --secondary-blue: #1992D4;
+    --accent-yellow: #F0B429;
+    --white: #FFFFFF;
+    --black: #000000;
+    --text-grey: #636363;
+}
