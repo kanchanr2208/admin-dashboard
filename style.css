@@ -133,6 +133,27 @@
     grid-column: 1 / 2; /*Spanning the 1st column*/
     grid-row: 2 / -1;  /*Spanning from 2nd row to end of rows*/
     background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    padding: 1em;
+}
+
+.project-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    border-left: 8px solid var(--yellow);
+    padding: 1em 1em 0 1em;                               /*Need to change this to remove scroll*/
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.project-card-icons {
+    display: flex;
+    justify-content: right;
+    gap: 0.5em;
+    padding-right: 1em;
 }
 
 .sidebar {
