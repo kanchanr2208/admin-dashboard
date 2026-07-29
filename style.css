@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 :root {
     --background-color: #E2E8F0;
     --blue: #1992D4;
@@ -90,7 +91,7 @@
     background-color: yellowgreen;              /*For visualization. To be removed later on*/
     margin: 1em;
     border-radius: 5px;
-    height: 40vh;               /*Will be different for trending card*/
+    height: 30vh;               /*Will be changed based on alignment with other sections*/
     padding: 1em;
     display: grid;
     gap: 0.5em;
@@ -109,6 +110,26 @@
     height: 6vh;  /*to be changed based on alignment and based on fixing the ellipses which is not working right now*/
 }
 
+.trending-card {
+    background-color: green;            /*For visualization. To be removed later on*/
+     margin: 1em;
+    border-radius: 5px;
+    height: 30vh;               /*Will be changed based on alignment with other sections*/
+    padding: 1em;
+    display: grid;
+    gap: 0.5em;
+    display: grid;
+}
 
+.profile {
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile-image {
+    padding-right: 1em;
+}
 
 
