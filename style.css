@@ -2,14 +2,54 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: aliceblue;
 }
 
 :root {
     --background-color: #E2E8F0;
-    --secondary-blue: #1992D4;
-    --accent-yellow: #F0B429;
+    --blue: #1992D4;
+    --yellow: #F0B429;
     --white: #FFFFFF;
     --black: #000000;
     --text-grey: #636363;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    width: 100%;
+    height: 100vh;
+}
+
+.container > *,
+.main-body > * {
+    outline: 1px solid black
+}
+
+.navbar {
+    background-color: var(--blue);
+}
+
+.main-body {
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+.header {
+    grid-column: 1 / -1;  /*Spanning all columns*/
+    grid-row: 1 / 2;      /*Spanning the whole row*/
+    background-color: var(--white);
+}
+
+.projects {
+    grid-column: 1 / 2; /*Spanning the 1st column*/
+    grid-row: 2 / -1;  /*Spanning from 2nd row to end of rows*/
+    background-color: var(--background-color);
+}
+
+.sidebar {
+    grid-column: 2 / -1; /*Spanning 2nd column*/
+    grid-row: 2/ -1; /*Spanning same as .projects*/
+    background-color: var(--background-color);
 }
