@@ -1,9 +1,16 @@
+@font-face {
+    font-family: 'Roboto';
+    src:url('./media/roboto-regular-webfont.woff2') format('woff2'),
+        url('./media/roboto-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
-
 
 :root {
     --background-color: #E2E8F0;
@@ -133,17 +140,24 @@
     grid-column: 1 / 2; /*Spanning the 1st column*/
     grid-row: 2 / -1;  /*Spanning from 2nd row to end of rows*/
     background-color: var(--background-color);
+    padding: 1em;
+}
+
+.projects > h2 {
+    padding-bottom: 0.5em;
+}
+
+.projects-card-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1em;
-    padding: 1em;
+    gap: 2em;
 }
 
 .project-card {
     background-color: var(--white);
     border-radius: 8px;
     border-left: 8px solid var(--yellow);
-    padding: 1em 1em 0 1em;                               /*Need to change this to remove scroll*/
+    padding: 1em;                               /*Need to change this to remove scroll*/
     display: flex;
     flex-direction: column;
     gap: 0.5em;
@@ -152,8 +166,12 @@
 .project-card-icons {
     display: flex;
     justify-content: right;
-    gap: 0.5em;
+    gap: 1em;
     padding-right: 1em;
+}
+
+.project-card-icons img {
+    height: 1.5em;
 }
 
 .sidebar {
@@ -209,5 +227,7 @@
 .profile-image {
     padding-right: 1em;
 }
+
+
 
 
