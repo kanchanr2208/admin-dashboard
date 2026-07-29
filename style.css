@@ -22,24 +22,27 @@
 
 .container > *,                               /*For visualization. To be removed later on*/
 .main-body > *,
-.navbar > * {
+.navbar > *,
+.sidebar > * {
     outline: 1px solid black
 }
 
 .main-menu li,
-.secondary-menu li {
-    outline: 1px solid hotpink;            /*For visualization. To be removed later on*/
+.secondary-menu li {                        /*For visualization. To be removed later on*/
+    outline: 1px solid hotpink;            
 }
 
-.navbar {
+.navbar {                                   /*Maybe change the menu items to flex? since it is more content related than layout related.*/
     background-color: var(--blue);
-    display: grid;                          /*Maybe change the menu items to flex? since it is more content related than layout related.*/
+    display: grid;                          
     grid-template-rows: 1fr 3fr 3fr;
     grid-template-columns: 1fr;
     gap: 3em;                               /*gap may be changed later on to align with header section*/
 }
 
-.navbar > * {                               /*For visualization. To be removed later on*/
+.navbar > *,
+.announcements,
+.trending {                               /*For visualization. To be removed later on*/
     background-color: beige;
 }
 
@@ -59,7 +62,7 @@
     background-color: var(--background-color);
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 1fr 5fr;           /*row spans may be changed later to align with other sections*/
 }
 
 .header {
@@ -78,4 +81,34 @@
     grid-column: 2 / -1; /*Spanning 2nd column*/
     grid-row: 2/ -1; /*Spanning same as .projects*/
     background-color: var(--background-color);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 0em;               /*Maybe changed later to align with other sections*/
 }
+
+.announcements-card {
+    background-color: yellowgreen;              /*For visualization. To be removed later on*/
+    margin: 1em;
+    border-radius: 5px;
+    height: 40vh;               /*Will be different for trending card*/
+    padding: 1em;
+    display: grid;
+    gap: 0.5em;
+}
+
+.announcements-card-section {
+    background-color: palevioletred;            /*For visualization. To be removed later on*/
+    border-bottom: 1px solid var(--text-grey);
+}
+
+.announcements-card-section p {
+    white-space: no-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    height: 6vh;  /*to be changed based on alignment and based on fixing the ellipses which is not working right now*/
+}
+
+
+
+
