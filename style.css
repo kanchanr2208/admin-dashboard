@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'Roboto';
-    src:url('./media/roboto-regular-webfont.woff2') format('woff2'),
-        url('./media/roboto-regular-webfont.woff') format('woff');
+    src:url('./media/roboto-regular-webfont.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
 }
@@ -113,7 +112,6 @@
     grid-template-columns: 2fr 1fr;
     grid-auto-flow: row;
     align-items: center;
-    background-color: #F0B429;              /*For visualization. To be removed later on*/
 }
 
 .search-bar {
@@ -122,13 +120,50 @@
     gap: 1em;
 }
 
+.search-input {
+    width: 40vw;
+    height: 2em;
+    border-radius: 100px;
+    border: none;
+    background-color: var(--background-color);
+    text-indent: 1em;
+    font-family: inherit;
+}
+
+.search-input:focus,
+.search-input:active {
+    border: none;
+    outline: 2px solid var(--text-grey);
+}
+
+.search-bar img,
+.header-user-profile img {
+    max-height: 1.5em;
+}
+
 .header-user-profile {
     display: flex;
     flex-direction: row;
     gap: 1em;
     justify-content: right;
-    outline: 1px solid black;           /*For visualization. To be removed later on*/
+    align-items: center;
+    font-weight: bold;
 }
+
+.header-user-image {
+    background-color: var(--yellow);
+    border-radius: 100px;
+    width: 4.5em;
+    height: 4.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-user-image img {
+    max-height: 3em;
+}
+
 
 .profile-menu {
     display: grid;
@@ -140,6 +175,20 @@
     display: flex;
     align-items: center;
     gap: 1em;
+}
+
+.profile-photo {
+    background-color: var(--yellow);
+    border-radius: 100px;
+    width: 3em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo img {
+    max-height: 2em;
 }
 
 .header-menu {

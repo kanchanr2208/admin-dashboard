@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link href="style.css" rel="stylesheet">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -59,18 +59,22 @@
             <header class="header">
                 <div class="search-menu">
                     <div class="search-bar">
-                        <div class="search-icon">Search Logo</div>
-                        <input type="text" class="search-input">
+                        <img src="/media/search.svg" alt="search icon" class="search-icon">
+                        <input type="text" class="search-input" minlength="3" maxlength="30">
                     </div>
                     <div class="header-user-profile">
-                        <div class="notification-icon">notify</div>
-                        <div class="profile-photo">Image</div>
+                        <img src="/media/notification.svg" alt="notification icon" class="notification-icon">
+                        <div class="profile-photo">
+                            <img src="/media/profile-photo.png" alt="profile photo with placeholder image as a cat">
+                        </div>
                         <div class="profile-name">Morgan Oakley</div>
                     </div>
                 </div>
                 <div class="profile-menu">
                     <div class="user-profile">
-                        <div class="header-user-image">Image</div>
+                        <div class="header-user-image">
+                            <img src="/media/profile-photo.png" alt="profile photo with placeholder image as a cat">
+                        </div>
                         <div class="header-user-details">
                             <p>Hi There</p>
                             <h2>Morgan Oakley (@morgan)</h2>
