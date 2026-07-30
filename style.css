@@ -198,10 +198,10 @@
 }
 
 .header-menu-item {
+    width: 7em;
+    height: 2.5em;
     background-color: var(--blue);
-    height: 2em;
     color: var(--white);
-    width: 5em;
     border-radius: 50px;
     display: flex;
     align-items: center;

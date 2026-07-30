@@ -11,8 +11,8 @@ inputField.addEventListener("keydown" , (e) => {
         let cleanText = e.target.value.trim()           //This removes spaces from the beginning or end of the string
         if (cleanText.length === 0) {
             return;
-        } else if (e.target.validity.patternMismatch) {
-            e.target.setCustomValidity("Only letters, numbers, and spaces are allowed. Please delete and try again")
+        } else if (e.target.validity.patternMismatch) { //Need this since it is not a real form. for a real form the validation will happen automatically.
+            e.target.setCustomValidity("Only letters, numbers, and spaces are allowed. Please delete and try again") 
             e.target.reportValidity()
         }  else if (cleanText.length < 3) {
             e.target.setCustomValidity("Search must be at least 3 characters.") //This is the custom message being set
