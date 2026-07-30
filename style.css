@@ -27,11 +27,6 @@
     height: 100vh;
 }
 
-.container > *,                               /*For visualization. To be removed later on*/
-.sidebar > * {
-    outline: 1px solid black
-}
-
 .navbar {                                   /*Maybe change the menu items to flex? since it is more content related than layout related.*/
     background-color: var(--blue);
     display: grid;                          
@@ -56,7 +51,6 @@
     fill: var(--white);
 }
 
-.announcements,
 .trending {                               /*For visualization. To be removed later on*/
     background-color: beige;
 }
@@ -103,7 +97,7 @@
     display: grid;
     grid-template-rows: 1fr 2fr;
     padding: 1em 2em;
-   box-shadow: 0px 0px 5px 2px lightgray;               /*does this color need a custom variable creation??*/
+    box-shadow: 0px 0px 5px 2px lightgray;               /*does this color need a custom variable creation??*/
     z-index: 1;                 /*messy way for ensuring box-shadow of header. need a better way*/
 }
 
@@ -217,7 +211,7 @@
 }
 
 .projects > h2 {
-    padding-bottom: 0.5em;
+    padding-bottom: 1em;
 }
 
 .projects-card-container {
@@ -253,30 +247,66 @@
     background-color: var(--background-color);
     display: grid;
     grid-template-rows: 1fr 1fr;
-    gap: 0em;               /*Maybe changed later to align with other sections*/
 }
 
+.announcements h2 {
+    padding-left: 1em;
+    padding-top: 1em;
+    font-size: 1.2em;
+}
+
+.announcements h3 {
+    font-size: 0.9em;
+}
+
+
 .announcements-card {
-    background-color: yellowgreen;              /*For visualization. To be removed later on*/
+    background-color: var(--white);
     margin: 1em;
     border-radius: 5px;
-    height: 30vh;               /*Will be changed based on alignment with other sections*/
-    padding: 1em;
+    padding: 2em;
     display: grid;
-    gap: 0.5em;
+    box-shadow: 0px 0px 5px 2px lightgray;  
 }
 
 .announcements-card-section {
-    background-color: palevioletred;            /*For visualization. To be removed later on*/
-    border-bottom: 1px solid var(--text-grey);
+    padding-bottom: 1em;
+    padding: 1em 0;
+    position: relative;  /*For the pseudo horizontal line anchoring*/
+}
+
+/*The horizontal line below each announcement-card-section*/
+.announcements-card-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(99, 99, 99, 0.4);
+}
+
+.announcements-card-section:first-child {
+    padding-top: 0;         /*To remove the extra top padding*/
+}
+
+.announcements-card-section:last-child {
+    padding-bottom: 0;      /*To remove the extra bottom padding*/
+}
+
+.announcements-card-section:last-child::after {
+    display: none; /* Hides the 3rd line */
 }
 
 .announcements-card-section p {
-    white-space: no-wrap;
+    font-size: 0.7em;
+    color: var(--text-grey);
+    line-height: 1.3;
+   
+    /* Multi-line ellipsis properties taken from Gemini*/
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%;
-    height: 6vh;  /*to be changed based on alignment and based on fixing the ellipses which is not working right now*/
 }
 
 .trending-card {
