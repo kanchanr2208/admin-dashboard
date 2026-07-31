@@ -34,7 +34,7 @@
     grid-template-rows: 0.5fr 2fr 4fr;
     grid-template-columns: 1fr;
     gap: 2.5em;                              
-    z-index: 2;                             /*messy way for ensuring box-shadow of header. need a better way*/
+    z-index: 2;                             /*To ensure box-shadow of header*/
     color: var(--white);
     align-content: start;
 }
@@ -56,14 +56,14 @@
 
 .main-menu {
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(2em, 1fr));     /*row width (minmax) may be changed later on to align with other sections*/
+    grid-template-rows: repeat(auto-fit, minmax(2em, 1fr));     
     padding-left: 1em;
     font-weight: bold;
 }
 
 .secondary-menu {
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(2em, 3em));     /*row width (minmax) may be changed later on to align with other sections*/
+    grid-template-rows: repeat(auto-fit, minmax(2em, 3em));     
     padding-left: 1em;
     font-weight: bold;
     padding-top: 1em;
@@ -90,7 +90,7 @@
     background-color: var(--background-color);
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 5fr;           /*row spans may be changed later to align with other sections*/
+    grid-template-rows: 1fr 5fr;           
 }
 
 .header {
@@ -101,7 +101,7 @@
     grid-template-rows: 1fr 2fr;
     padding: 1em 2em;
     box-shadow: var(--boxshadow);
-    z-index: 1;                 /*messy way for ensuring box-shadow of header. need a better way*/
+    z-index: 1;                     /*To ensure box-shadow of header*/
 }
 
 .search-menu {
@@ -228,7 +228,7 @@
     background-color: var(--white);
     border-radius: 8px;
     border-left: 8px solid var(--yellow);
-    padding: 1em;                               /*Need to change this to remove scroll*/
+    padding: 1em;                               
     display: flex;
     flex-direction: column;
     gap: 0.5em;
