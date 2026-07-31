@@ -18,6 +18,7 @@
     --white: #FFFFFF;
     --black: #000000;
     --text-grey: #636363;
+    --boxshadow: 0px 0px 5px 2px lightgray; 
 }
 
 .container {
@@ -27,14 +28,15 @@
     height: 100vh;
 }
 
-.navbar {                                   /*Maybe change the menu items to flex? since it is more content related than layout related.*/
+.navbar {                                  
     background-color: var(--blue);
     display: grid;                          
-    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-rows: 0.5fr 2fr 4fr;
     grid-template-columns: 1fr;
-    gap: 3em;                               /*gap may be changed later on to align with header section*/
+    gap: 2.5em;                              
     z-index: 2;                             /*messy way for ensuring box-shadow of header. need a better way*/
     color: var(--white);
+    align-content: start;
 }
 
 .navbar-title {
@@ -59,9 +61,17 @@
     font-weight: bold;
 }
 
+.secondary-menu {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(2em, 3em));     /*row width (minmax) may be changed later on to align with other sections*/
+    padding-left: 1em;
+    font-weight: bold;
+    padding-top: 1em;
+}
+
 .main-menu img,
 .secondary-menu img {
-    max-height: 2em;
+    max-height: 1.5em;
 }
 
 .main-menu > div,
@@ -71,14 +81,10 @@
     align-items: center;
     justify-content: left;
     gap: 1em;
+    font-size: 1.2em;
 }
 
-.secondary-menu {
-    display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(2em, 3em));     /*row width (minmax) may be changed later on to align with other sections*/
-    padding-left: 1em;
-    font-weight: bold;
-}
+
 
 .main-body {
     background-color: var(--background-color);
@@ -94,7 +100,7 @@
     display: grid;
     grid-template-rows: 1fr 2fr;
     padding: 1em 2em;
-    box-shadow: 0px 0px 5px 2px lightgray;               /*does this color need a custom variable creation??*/
+    box-shadow: var(--boxshadow);
     z-index: 1;                 /*messy way for ensuring box-shadow of header. need a better way*/
 }
 
@@ -135,7 +141,7 @@
 .header-user-profile {
     display: flex;
     flex-direction: row;
-    gap: 1em;
+    gap: 2em;
     justify-content: right;
     align-items: center;
     font-weight: bold;
@@ -209,6 +215,7 @@
 
 .projects > h2 {
     padding-bottom: 1em;
+    font-size: 1.2em;
 }
 
 .projects-card-container {
@@ -225,13 +232,23 @@
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+    box-shadow: var(--boxshadow);
+}
+
+.project-card-title {
+    padding-top: 1em;
+}
+
+.project-card-text {
+    color: var(--text-grey);
+    height: 6em;
 }
 
 .project-card-icons {
     display: flex;
     justify-content: right;
     gap: 1em;
-    padding-right: 1em;
+    padding: 1em 1em 1em 0;
 }
 
 .project-card-icons img {
@@ -243,8 +260,10 @@
     grid-row: 2/ -1; /*Spanning same as .projects*/
     background-color: var(--background-color);
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.9fr 1fr;
+    gap: 2em;
 }
+
 
 .announcements h2,
 .trending h2 {
@@ -264,12 +283,11 @@
     border-radius: 5px;
     padding: 2em;
     display: grid;
-    box-shadow: 0px 0px 5px 2px lightgray;  
+    box-shadow: var(--boxshadow);
 }
 
 .announcements-card-section {
-    padding-bottom: 1em;
-    padding: 1em 0;
+    padding: 1.2em 0;
     position: relative;  /*For the pseudo horizontal line anchoring*/
 }
 
@@ -279,8 +297,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 1px;
-    background-color: rgba(99, 99, 99, 0.4);
+    outline: 0.5px solid rgba(99, 99, 99, 0.3);
 }
 
 .announcements-card-section:first-child {
@@ -311,11 +328,11 @@
     background-color: var(--white);
     margin: 1em;
     border-radius: 5px;
-    padding: 1em;
+    padding: 2em;
     display: grid;
-    gap: 0.5em;
+    gap: 2em;
     display: grid;
-    box-shadow: 0px 0px 5px 2px lightgray;  
+    box-shadow: var(--boxshadow);
 }
 
 .profile {
@@ -344,6 +361,10 @@
     width: 3em; /*The rest above are proper images. .four image is an svg i modified and hence it needs different settings*/
 }
 
+.user-handle, 
+.user-tag {
+    font-size: 0.9em;
+}
 
 .user-tag {
     color: var(--text-grey);
